@@ -38,4 +38,13 @@ if (imc < 18.5) {
   console.log("Obesity");
 }
 
+console.log("------------------------")
+console.log("All the vivid years: ");
+
+let year = 2023 - age
+for (let i = 0; i <= age; i++) {
+  console.log(`${year} - ${i} years old`);
+  year++;
+}
+
 
