@@ -15,6 +15,17 @@
     continuing = false;
   }
  }
- 
+
+ // Calculating the wage forecast for next years
+ let increase = 0.015
+ console.log("Forecast for next years: ");
+
+ for (let year = 1; year <= 10; year++) {
+  clientWage += clientWage * increase;
+  increase *= 2;
+
+  console.log(`${2024 + year} - R$ ${clientWage}`);
+ }
+
 
 
