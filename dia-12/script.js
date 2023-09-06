@@ -22,6 +22,7 @@ while (continuing) {
       names[counter] = newName
       passwords[counter] = newPassword
       counter++
+      console.log("Sucessful register!");
       break
     case 2:
       let name = prompt("Enter your name: ")
@@ -31,23 +32,28 @@ while (continuing) {
       for (let i = 0; i < names.length; i++) {
         if (names[i] == name && passwords[i] == password) {
           console.log("Sucessful login!")
+        } else if (i == (nomes.length - 1)) {
+          console.log("Name or password incorrect");
         }
       }
       break
     case 3:
       let deleteName = prompt("Enter the name to wish delete: ")
-      let newNames = []
-      let newPasswords = []
+      let namesSup = [];
+      let passwordsSup = [];
+      let counterSup = 0;
 
       for (let i = 0; i < names.length; i++) {
         if (deleteName == names[i]) {
-          names -= names[i]
-          passwords -= passwords[i]
-
-          newNames[i] = names[i]
-          newPasswords[i] = passwords[i]
+          console.log("Deleted user");
+        } else {
+          namesSup[counterSup] = names[i];
+          passwordsSup[counterSup] = passwords[i];
+          counterSup++;
         }
       }
+      names = namesSup;
+      passwords = passwordsSup;
       break
     case 4:
       console.log("Programa finalizado.")
