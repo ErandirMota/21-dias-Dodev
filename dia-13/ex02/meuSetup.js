@@ -1,29 +1,30 @@
 class Computer {
-  Type
-  Processor
-  Video
-  Storage
-  RamMemory
-  Ssd
-
   constructor(type, processor, video, storage, ramMemory, ssd) {
-    this.Type = type;
-    this.Processor = processor;
-    this.Video = video;
-    this.Storage = storage;
-    this.RamMemory = ramMemory;
-    this.Ssd = ssd;
+    this.type = type;
+    this.processor = processor;
+    this.video = video;
+    this.storage = storage;
+    this.ramMemory = ramMemory;
+    this.ssd = ssd;
   }
 
   displayInformation() {
-    console.log("Computer information: ");
-    console.log(`Type: ${this.Type}`);
-    console.log(`Processor: ${this.Processor}`);
-    console.log(`Video: ${this.Video}`);
-    console.log(`Storage: ${this.Storage}`);
-    console.log(`Ram Memory: ${this.RamMemory}`);
-    console.log(`SSD: ${this.Ssd}`);
+    console.log(`Type: ${this.type}`);
+    console.log(`Processor: ${this.processor}`);
+    console.log(`Video: ${this.video}`);
+    console.log(`Storage: ${this.storage}`);
+    console.log(`Ram Memory: ${this.ramMemory}`);
+    console.log(`SSD: ${this.ssd}`);
   }
 }
 
-const myComputer = new Computer("Notebook", "Intel core 5", "Integrado", "500gb", "8gb", true)
+const myComputer = new Computer(
+  "Notebook",
+  "Intel core i5",
+  "Integrated",
+  "500GB",
+  "8GB",
+  true
+)
+
+myComputer.displayInformation();
