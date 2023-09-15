@@ -23,19 +23,19 @@ class Race {
   Name
   Type
   Distance
+  Winner
   Participants
-  Winner 
 
   constructor(name, type, distance) {
-    this.Name = name;
-    this.Type = type;
-    this.Distance = distance;
-    this.Participants = [];
-    this.Winner = "";
+    this.Name = name
+    this.Type = type
+    this.Distance = distance
+    this.Winner = ""
+    this.Participants = []
   }
 
   verifyingWinner() {
-    let shorterTime = this.Participants[0].calculateAverageTime(this.distance);
+    let shorterTime = this.Participants[0].calculateAverageTime(this.Distance);
     let winner = this.Participants[0];
 
     for (let i = 1; i < this.Participants.length; i++) {
@@ -50,7 +50,7 @@ class Race {
   }
 
   displayWinner() {
-    alert(`The winner is: ${this.winner.Name}`);
+    alert(`The winner is: ${this.Winner.Name}`);
   }
 }
 
